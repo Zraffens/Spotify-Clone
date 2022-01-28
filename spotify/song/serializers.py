@@ -11,7 +11,6 @@ class SongSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def get_logo(self, instance):
-        print('it at least goes through this one')
         return 'http://localhost:8000/media/' + str(instance.album.logo)
     
     def get_artistn(self, instance):
